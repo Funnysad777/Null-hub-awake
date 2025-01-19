@@ -1,4 +1,20 @@
 wait(13)
+local player = game:GetService("Players").LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local gameGui = playerGui:WaitForChild("GameGui")
+local info = gameGui:WaitForChild("Info")
+local autoSkip = info:WaitForChild("Auto_Skip")
+local redButton = autoSkip:WaitForChild("Red")
+
+-- ตรวจสอบว่าปุ่ม Red มีอยู่
+if redButton then
+    redButton.BackgroundColor3 = Color3.fromRGB(13, 255, 0) -- เปลี่ยนสีพื้นหลังเป็นสีเขียว
+    print("สีของปุ่ม Red ถูกเปลี่ยนแล้ว!")
+else
+    warn("ไม่พบปุ่ม Red ใน GUI!")
+end
+
+wait(10)
 local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
 
 local function hasEnoughGold(amount)
