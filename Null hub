@@ -88,12 +88,12 @@ end
 
 -- ตารางการอัปเกรด
 local upgrades = {
-    {name = "Scientist Cameraman", gold = 100, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = nil},
-    {name = "Scientist Cameraman2", gold = 300, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman"},
-    {name = "Scientist Cameraman3", gold = 600, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman2"},
-    {name = "Scientist Cameraman4", gold = 1000, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman3"},
-    {name = "Scientist Cameraman5", gold = 2000, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman4"},
-    {name = "Scientist Cameraman5", gold = 5000, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman5"}
+    {name = "Scientist Cameraman", gold = 100, position = CFrame.new(-82.7974853515625, -15.121337890625, -52.27956008911133), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Scientist Cameraman2", gold = 300, position = CFrame.new(-82.7974853515625, -15.121337890625, -52.27956008911133), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman"},
+    {name = "Scientist Cameraman3", gold = 600, position = CFrame.new(-82.7974853515625, -15.121337890625, -52.27956008911133), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman2"},
+    {name = "Scientist Cameraman4", gold = 1000, position = CFrame.new(-82.7974853515625, -15.121337890625, -52.27956008911133), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman3"},
+    {name = "Scientist Cameraman5", gold = 2000, position = CFrame.new(-82.7974853515625, -15.121337890625, -52.27956008911133), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman4"},
+    {name = "Scientist Cameraman5", gold = 5000, position = CFrame.new(-82.7974853515625, -15.121337890625, -52.27956008911133), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman5"}
 }
 
 -- ลูปการอัปเกรด
