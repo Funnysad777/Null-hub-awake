@@ -137,7 +137,7 @@ end
 local upgrades = {
     {name = "Upgraded Titan Speakerman", gold = 1000, position = CFrame.new(-90.61011505126953, -15.121337890625, -58.302581787109375), angles = CFrame.Angles(0, 0, 0), tower = nil},
     {name = "Upgraded Titan Speakerman2", gold = 600, position = CFrame.new(-90.61011505126953, -15.121337890625, -58.302581787109375), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman"},
-    {name = "Upgraded Titan Speakerman3", gold = 1500, position = CFrame.new(-90.61011505126953, -15.121337890625, -58.302581787109375), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman2"},
+    {name = "Upgraded Titan Speakerman3", gold = 2000, position = CFrame.new(-90.61011505126953, -15.121337890625, -58.302581787109375), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman2"},
     {name = "Upgraded Titan Speakerman4", gold = 3000, position = CFrame.new(-90.61011505126953, -15.121337890625, -58.302581787109375), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman3"},
     {name = "Upgraded Titan Speakerman5", gold = 6000, position = CFrame.new(-90.61011505126953, -15.121337890625, -58.302581787109375), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman4"}
 }
