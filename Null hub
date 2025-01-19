@@ -1,6 +1,5 @@
 local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
 
--- ฟังก์ชันสำหรับตรวจสอบ Gold
 local function hasEnoughGold(amount)
     local playerStats = workspace.PlayerStats:FindFirstChild(player.Name)
     if playerStats and playerStats:FindFirstChild("Gold") then
@@ -11,7 +10,6 @@ local function hasEnoughGold(amount)
     return false
 end
 
--- ฟังก์ชันสำหรับส่งคำสั่ง ChangeMode
 local function changeMode(name, position, angles, towerName)
     local args = {
         [1] = name,
@@ -21,7 +19,6 @@ local function changeMode(name, position, angles, towerName)
     game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
 end
 
--- ตารางการอัปเกรด
 local upgrades = {
     {name = "Ninja Cameraman", gold = 200, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = nil},
     {name = "Ninja Cameraman2", gold = 201, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = "Ninja Cameraman"},
@@ -30,16 +27,15 @@ local upgrades = {
     {name = "Ninja Cameraman5", gold = 600, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = "Ninja Cameraman4"}
 }
 
--- ลูปการอัปเกรด
 local i = 1
 while i <= #upgrades do
     local upgrade = upgrades[i]
     if hasEnoughGold(upgrade.gold) then
         changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
         print("ทำการอัปเกรด " .. upgrade.name)
-        i = i + 1 -- ไปยังการอัปเกรดถัดไป
+        i = i + 1
     else
         print("ไม่พอ Gold สำหรับการอัปเกรด " .. upgrade.name)
-        wait(1) -- รอ 1 วินาที
+        wait(1)
     end
 end
