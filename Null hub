@@ -1,3 +1,9 @@
+local args = {
+    [1] = "Nightmare"
+}
+
+game:GetService("ReplicatedStorage").Events.VoteForMap:FireServer(unpack(args))
+
 wait(13)
 local player = game:GetService("Players").LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
