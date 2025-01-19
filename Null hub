@@ -23,11 +23,11 @@ end
 
 -- ตารางการอัปเกรด
 local upgrades = {
-    {name = "Titan Cameraman", gold = 750, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = nil},
-    {name = "Titan Cameraman2", gold = 1200, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = "Titan Cameraman"},
-    {name = "Titan Cameraman3", gold = 1500, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = "Titan Cameraman2"},
-    {name = "Titan Cameraman4", gold = 3000, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = "Titan Cameraman3"},
-    {name = "Titan Cameraman5", gold = 5000, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = "Titan Cameraman4"}
+    {name = "Ninja Cameraman", gold = 200, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Ninja Cameraman2", gold = 201, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = "Ninja Cameraman"},
+    {name = "Ninja Cameraman3", gold = 300, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = "Ninja Cameraman2"},
+    {name = "Ninja Cameraman4", gold = 400, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = "Ninja Cameraman3"},
+    {name = "Ninja Cameraman5", gold = 600, position = CFrame.new(-70.979, -9.580, -58.983), angles = CFrame.Angles(0, 0, 0), tower = "Ninja Cameraman4"}
 }
 
 -- ลูปการอัปเกรด
