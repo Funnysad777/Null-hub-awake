@@ -136,7 +136,7 @@ end
 -- ตารางการอัปเกรด
 local upgrades = {
     {name = "Upgraded Titan Speakerman", gold = 1000, position = CFrame.new(-89.4161605834961, -9.581405639648438, -56.570579528808594), angles = CFrame.Angles(0, 0, 0), tower = nil},
-    {name = "Upgraded Titan Speakerman2", gold = 600, position = CFrame.new(-89.4161605834961, -9.581405639648438, -56.570579528808594), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman"},
+    {name = "Upgraded Titan Speakerman2", gold = 1000, position = CFrame.new(-89.4161605834961, -9.581405639648438, -56.570579528808594), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman"},
     {name = "Upgraded Titan Speakerman3", gold = 2000, position = CFrame.new(-89.4161605834961, -9.581405639648438, -56.570579528808594), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman2"},
     {name = "Upgraded Titan Speakerman4", gold = 4000, position = CFrame.new(-89.4161605834961, -9.581405639648438, -56.570579528808594), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman3"},
     {name = "Upgraded Titan Speakerman5", gold = 6000, position = CFrame.new(-89.4161605834961, -9.581405639648438, -56.570579528808594), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman4"}
