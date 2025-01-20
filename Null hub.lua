@@ -43,11 +43,11 @@ local function changeMode(name, position, angles, towerName)
 end
 
 local upgrades = {
-    {name = "Dark Speakerman", gold = 150, position = CFrame.new(-72.76365661621094, -15.121337890625, -59.39636993408203), angles = CFrame.Angles(0, 0, 0), tower = nil},
-    {name = "Dark Speakerman2", gold = 100, position = CFrame.new(-72.76365661621094, -15.121337890625, -59.39636993408203), angles = CFrame.Angles(0, 0, 0), tower = "Dark Speakerman"},
-    {name = "Dark Speakerman3", gold = 200, position = CFrame.new(-72.76365661621094, -15.121337890625, -59.39636993408203), angles = CFrame.Angles(0, 0, 0), tower = "Dark Speakerman2"},
-    {name = "Dark Speakerman4", gold = 300, position = CFrame.new(-72.76365661621094, -15.121337890625, -59.39636993408203), angles = CFrame.Angles(0, 0, 0), tower = "Dark Speakerman3"},
-    {name = "Dark Speakerman5", gold = 400, position = CFrame.new(-72.76365661621094, -15.121337890625, -59.39636993408203), angles = CFrame.Angles(0, 0, 0), tower = "Dark Speakerman4"}
+    {name = "Ninja Cameraman", gold = 200, position = CFrame.new(-72.76365661621094, -15.121337890625, -59.39636993408203), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Ninja Cameraman2", gold = 201, position = CFrame.new(-72.76365661621094, -15.121337890625, -59.39636993408203), angles = CFrame.Angles(0, 0, 0), tower = "Ninja Cameraman"},
+    {name = "Ninja Cameraman3", gold = 300, position = CFrame.new(-72.76365661621094, -15.121337890625, -59.39636993408203), angles = CFrame.Angles(0, 0, 0), tower = "Ninja Cameraman2"},
+    {name = "Ninja Cameraman4", gold = 400, position = CFrame.new(-72.76365661621094, -15.121337890625, -59.39636993408203), angles = CFrame.Angles(0, 0, 0), tower = "Ninja Cameraman3"},
+    {name = "Ninja Cameraman5", gold = 600, position = CFrame.new(-72.76365661621094, -15.121337890625, -59.39636993408203), angles = CFrame.Angles(0, 0, 0), tower = "Ninja Cameraman4"}
 }
 
 local i = 1
