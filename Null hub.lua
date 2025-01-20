@@ -477,3 +477,8 @@ while i <= #upgrades do
         wait(1) -- รอ 1 วินาที
     end
 end
+
+while true do
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("VoteSkip"):InvokeServer()
+wait(0.2)
+end
