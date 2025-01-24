@@ -375,3 +375,48 @@ for i, upgrade in ipairs(upgrades) do
         changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
     end
 end
+
+local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
+
+-- ฟังก์ชันสำหรับตรวจสอบ Gold
+local function hasEnoughGold(amount)
+    if workspace.PlayerStats:FindFirstChild(player.Name) and 
+       workspace.PlayerStats[player.Name]:FindFirstChild("Gold") and 
+       workspace.PlayerStats[player.Name].Gold.Value >= amount then
+        return true
+    end
+    return false
+end
+
+-- ฟังก์ชันสำหรับส่งคำสั่ง ChangeMode
+local function changeMode(name, position, angles, towerName)
+    local args = {
+        [1] = name,
+        [2] = position * angles,
+        [3] = towerName and workspace.Towers:FindFirstChild(towerName) or nil
+    }
+    game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+end
+
+-- ขั้นตอนการอัปเกรด
+local upgrades = {
+    {name = "Upgraded Titan Cameraman", gold = 200, position = CFrame.new(), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Upgraded Titan Cameraman2", gold = 500, position = CFrame.new(), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman"},
+    {name = "Upgraded Titan Cameraman3", gold = 750, position = CFrame.new(), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman2"},
+    {name = "Upgraded Titan Cameraman4", gold = 1500, position = CFrame.new(), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman3"}
+    {name = "Upgraded Titan Cameraman4", gold = 1500, position = CFrame.new(), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman4"}
+}
+
+-- ทำงานตามขั้นตอน
+for i, upgrade in ipairs(upgrades) do
+    if i == 1 then
+        -- ทำงานส่วนแรกทันทีโดยไม่ตรวจสอบ Gold
+        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
+    else
+        -- รอจนกว่า Gold จะเพียงพอในส่วนที่เหลือ
+        while not hasEnoughGold(upgrade.gold) do
+            task.wait(0.1)
+        end
+        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
+    end
+end
