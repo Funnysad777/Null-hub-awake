@@ -35,7 +35,6 @@ for _, upgrade in ipairs(upgrades) do
             task.wait(0.1)
         end
         changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
-    end
 end
 
 local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
@@ -75,7 +74,6 @@ for _, upgrade in ipairs(upgrades) do
             task.wait(0.1)
         end
         changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
-    end
 end
 
 local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
@@ -320,5 +318,4 @@ for _, upgrade in ipairs(upgrades) do
             task.wait(0.1)
         end
         changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
-    end
 end
