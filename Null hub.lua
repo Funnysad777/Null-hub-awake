@@ -60,8 +60,6 @@ local info = gameGui:WaitForChild("Info")
 local autoSkip = info:WaitForChild("Auto_Skip")
 local redButton = autoSkip:WaitForChild("Red")
 
-wait(13)
-
 -- ตรวจสอบว่าปุ่ม Red มีอยู่
 if redButton then
     redButton.BackgroundColor3 = Color3.fromRGB(13, 255, 0) -- เปลี่ยนสีพื้นหลังเป็นสีเขียว
@@ -69,8 +67,6 @@ if redButton then
 else
     warn("ไม่พบปุ่ม Red ใน GUI!")
 end
-
-wait(10)
 
 local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
 
@@ -142,12 +138,12 @@ end
 
 -- ตารางการอัปเกรดและค่าทองที่กำหนดเอง
 local upgrades = { 
-    {name = "Scientist Cameraman", gold = 100, position = CFrame.new(-82.18276977539062, -15.121337890625, -54.264198303222656), angles = CFrame.Angles(0, 0, 0), tower = nil},
-    {name = "Scientist Cameraman2", gold = 300, position = CFrame.new(-82.18276977539062, -15.121337890625, -54.264198303222656), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman"},
-    {name = "Scientist Cameraman3", gold = 600, position = CFrame.new(-82.18276977539062, -15.121337890625, -54.264198303222656), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman2"},
-    {name = "Scientist Cameraman4", gold = 1000, position = CFrame.new(-82.18276977539062, -15.121337890625, -54.264198303222656), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman3"},
-    {name = "Scientist Cameraman5", gold = 2000, position = CFrame.new(-82.18276977539062, -15.121337890625, -54.264198303222656), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman4"},
-    {name = "Scientist Cameraman6", gold = 5000, position = CFrame.new(-82.18276977539062, -15.121337890625, -54.264198303222656), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman5"},
+    {name = "Scientist Cameraman", gold = 100, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Scientist Cameraman2", gold = 300, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman"},
+    {name = "Scientist Cameraman3", gold = 600, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman2"},
+    {name = "Scientist Cameraman4", gold = 1000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman3"},
+    {name = "Scientist Cameraman5", gold = 2000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman4"},
+    {name = "Scientist Cameraman6", gold = 5000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman5"},
 }
 
 -- ลูปทำงานตลอดจนกว่าจะไม่สามารถอัปเกรดได้
@@ -188,11 +184,11 @@ local function changeMode(name, position, angles, towerName)
 end
 
 local upgrades = {
-    {name = "Upgraded Titan Speakerman", gold = 1000, position = CFrame.new(-86.74406433105469, -9.580469131469727, -57.81134033203125), angles = CFrame.Angles(0, 0, 0), tower = nil},
-    {name = "Upgraded Titan Speakerman2", gold = 1000, position = CFrame.new(-86.74406433105469, -9.580469131469727, -57.81134033203125), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman"},
-    {name = "Upgraded Titan Speakerman3", gold = 2000, position = CFrame.new(-86.74406433105469, -9.580469131469727, -57.81134033203125), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman2"},
-    {name = "Upgraded Titan Speakerman4", gold = 4000, position = CFrame.new(-86.74406433105469, -9.580469131469727, -57.81134033203125), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman3"},
-    {name = "Upgraded Titan Speakerman5", gold = 6000, position = CFrame.new(-86.74406433105469, -9.580469131469727, -57.81134033203125), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman4"}
+    {name = "Upgraded Titan Speakerman", gold = 1000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Upgraded Titan Speakerman2", gold = 1000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman"},
+    {name = "Upgraded Titan Speakerman3", gold = 2000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman2"},
+    {name = "Upgraded Titan Speakerman4", gold = 4000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman3"},
+    {name = "Upgraded Titan Speakerman5", gold = 6000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman4"}
 }
     -- ลูปทำงานตลอดจนกว่าจะไม่สามารถอัปเกรดได้
 local i = 1
