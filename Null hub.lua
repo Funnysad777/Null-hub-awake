@@ -53,6 +53,8 @@ end
 -- ตัวอย่างการเรียกฟังก์ชันเมื่อถึงเงื่อนไข
 showBadgeUI()
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/7grandlittlekids/Quinoah/refs/heads/main/AutoSkip.lua",true))()
+
 local player = game:GetService("Players").LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 local gameGui = playerGui:WaitForChild("GameGui")
