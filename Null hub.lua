@@ -92,11 +92,10 @@ end
 
 -- ขั้นตอนการอัปเกรด
 local upgrades = {
-    {name = "ScarySpeakerman", gold = 150, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = nil},
-    {name = "ScarySpeakerman2", gold = 400, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(-3.1415927410125732, 0.3082665503025055, -3.1415927410125732), tower = "ScarySpeakerman"},
-    {name = "ScarySpeakerman3", gold = 1000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(-3.1415927410125732, -0.5998259782791138, -3.1415927410125732), tower = "ScarySpeakerman2"},
-    {name = "ScarySpeakerman4", gold = 2500, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(-3.1415927410125732, -0.8647982478141785, -3.1415927410125732), tower = "ScarySpeakerman3"},
-    {name = "ScarySpeakerman5", gold = 4000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(-3.1415927410125732, 0.30992642045021057, -3.1415927410125732), tower = "ScarySpeakerman4"}
+    {name = "ScarySpeakerman", gold = 100, position = CFrame.new(-64.4728546, -34.0955658, -17.6681023, -0.999657393, -1.10892922e-08, 0.0261741541, -1.09862253e-08, 1, 4.08153733e-09, -0.0261741541, 3.79258358e-09, -0.999657393), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "ScarySpeakerman2", gold = 200, position = CFrame.new(-64.4728546, -34.0955658, -17.6681023, -0.999657393, -1.10892922e-08, 0.0261741541, -1.09862253e-08, 1, 4.08153733e-09, -0.0261741541, 3.79258358e-09, -0.999657393), angles = CFrame.Angles(-3.1415927410125732, 0.3082665503025055, -3.1415927410125732), tower = "ScarySpeakerman"},
+    {name = "ScarySpeakerman3", gold = 300, position = CFrame.new(-64.4728546, -34.0955658, -17.6681023, -0.999657393, -1.10892922e-08, 0.0261741541, -1.09862253e-08, 1, 4.08153733e-09, -0.0261741541, 3.79258358e-09, -0.999657393), angles = CFrame.Angles(-3.1415927410125732, -0.5998259782791138, -3.1415927410125732), tower = "ScarySpeakerman2"},
+    {name = "ScarySpeakerman4", gold = 400, position = CFrame.new(-64.4728546, -34.0955658, -17.6681023, -0.999657393, -1.10892922e-08, 0.0261741541, -1.09862253e-08, 1, 4.08153733e-09, -0.0261741541, 3.79258358e-09, -0.999657393), angles = CFrame.Angles(-3.1415927410125732, -0.8647982478141785, -3.1415927410125732), tower = "ScarySpeakerman3"},
 }
 
 -- ทำงานตามขั้นตอน
