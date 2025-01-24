@@ -19,7 +19,7 @@ local function showBadgeUI()
     local badgeText = Instance.new("TextLabel")
     badgeText.Size = UDim2.new(1, 0, 1, 0)
     badgeText.Position = UDim2.new(0, 0, 0, 0)
-    badgeText.Text = "Null Hub(made by funnysad)"
+    badgeText.Text = "Null Hub"
     badgeText.TextColor3 = Color3.new(1, 1, 1)
     badgeText.BackgroundTransparency = 1
     badgeText.Font = Enum.Font.GothamBold
