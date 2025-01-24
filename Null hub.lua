@@ -330,11 +330,11 @@ end
 
 -- ขั้นตอนการอัปเกรด
 local upgrades = {
-    {name = "Upgraded Titan Cameraman", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522, 0.267386645, -5.74528798e-08, 0.963589311, -1.85981666e-08, 1, 6.47846292e-08, -0.963589311, -3.52435414e-08, 0.267386645), angles = CFrame.Angles(0, 0, 0), tower = nil},
-    {name = "Upgraded Titan Cameraman2", gold = 3000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522, 0.267386645, -5.74528798e-08, 0.963589311, -1.85981666e-08, 1, 6.47846292e-08, -0.963589311, -3.52435414e-08, 0.267386645), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman"},
-    {name = "Upgraded Titan Cameraman3", gold = 4000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522, 0.267386645, -5.74528798e-08, 0.963589311, -1.85981666e-08, 1, 6.47846292e-08, -0.963589311, -3.52435414e-08, 0.267386645), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman2"},
-    {name = "Upgraded Titan Cameraman4", gold = 8000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522, 0.267386645, -5.74528798e-08, 0.963589311, -1.85981666e-08, 1, 6.47846292e-08, -0.963589311, -3.52435414e-08, 0.267386645), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman3"}
-    {name = "Upgraded Titan Cameraman4", gold = 10000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522, 0.267386645, -5.74528798e-08, 0.963589311, -1.85981666e-08, 1, 6.47846292e-08, -0.963589311, -3.52435414e-08, 0.267386645), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman4"}
+    {name = "Upgraded Titan Cameraman", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Upgraded Titan Cameraman2", gold = 3000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman"},
+    {name = "Upgraded Titan Cameraman3", gold = 4000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman2"},
+    {name = "Upgraded Titan Cameraman4", gold = 8000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman3"},
+    {name = "Upgraded Titan Cameraman5", gold = 10000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman4"}
 }
 
 -- ทำงานตามขั้นตอน
