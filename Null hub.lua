@@ -320,3 +320,283 @@ for _, upgrade in ipairs(upgrades) do
         end
         changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
 end
+
+local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
+
+-- ฟังก์ชันสำหรับตรวจสอบ Gold
+local function hasEnoughGold(amount)
+    if workspace.PlayerStats:FindFirstChild(player.Name) and 
+       workspace.PlayerStats[player.Name]:FindFirstChild("Gold") and 
+       workspace.PlayerStats[player.Name].Gold.Value >= amount then
+        return true
+    end
+    return false
+end
+
+-- ฟังก์ชันสำหรับส่งคำสั่ง ChangeMode
+local function changeMode(name, position, angles, towerName)
+    local args = {
+        [1] = name,
+        [2] = position * angles,
+        [3] = towerName and workspace.Towers:FindFirstChild(towerName) or nil
+    }
+    game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+end
+
+-- ขั้นตอนการอัปเกรด
+local upgrades = {
+    {name = "Upgraded Titan Cameraman", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Upgraded Titan Cameraman2", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman"},
+    {name = "Upgraded Titan Cameraman3", gold = 3000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman2"},
+    {name = "Upgraded Titan Cameraman4", gold = 4000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman3"},
+    {name = "Upgraded Titan Cameraman5", gold = 8000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman4"},
+    {name = "Upgraded Titan Cameraman6", gold = 10000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman5"}
+}
+
+-- ทำงานตามขั้นตอน
+for _, upgrade in ipairs(upgrades) do
+        while not hasEnoughGold(upgrade.gold) do
+            task.wait(0.1)
+        end
+        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
+end
+
+local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
+
+-- ฟังก์ชันสำหรับตรวจสอบ Gold
+local function hasEnoughGold(amount)
+    if workspace.PlayerStats:FindFirstChild(player.Name) and 
+       workspace.PlayerStats[player.Name]:FindFirstChild("Gold") and 
+       workspace.PlayerStats[player.Name].Gold.Value >= amount then
+        return true
+    end
+    return false
+end
+
+-- ฟังก์ชันสำหรับส่งคำสั่ง ChangeMode
+local function changeMode(name, position, angles, towerName)
+    local args = {
+        [1] = name,
+        [2] = position * angles,
+        [3] = towerName and workspace.Towers:FindFirstChild(towerName) or nil
+    }
+    game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+end
+
+-- ขั้นตอนการอัปเกรด
+local upgrades = {
+    {name = "Upgraded Titan Cameraman", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Upgraded Titan Cameraman2", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman"},
+    {name = "Upgraded Titan Cameraman3", gold = 3000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman2"},
+    {name = "Upgraded Titan Cameraman4", gold = 4000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman3"},
+    {name = "Upgraded Titan Cameraman5", gold = 8000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman4"},
+    {name = "Upgraded Titan Cameraman6", gold = 10000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman5"}
+}
+
+-- ทำงานตามขั้นตอน
+for _, upgrade in ipairs(upgrades) do
+        while not hasEnoughGold(upgrade.gold) do
+            task.wait(0.1)
+        end
+        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
+end
+
+local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
+
+-- ฟังก์ชันสำหรับตรวจสอบ Gold
+local function hasEnoughGold(amount)
+    if workspace.PlayerStats:FindFirstChild(player.Name) and 
+       workspace.PlayerStats[player.Name]:FindFirstChild("Gold") and 
+       workspace.PlayerStats[player.Name].Gold.Value >= amount then
+        return true
+    end
+    return false
+end
+
+-- ฟังก์ชันสำหรับส่งคำสั่ง ChangeMode
+local function changeMode(name, position, angles, towerName)
+    local args = {
+        [1] = name,
+        [2] = position * angles,
+        [3] = towerName and workspace.Towers:FindFirstChild(towerName) or nil
+    }
+    game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+end
+
+-- ขั้นตอนการอัปเกรด
+local upgrades = {
+    {name = "Upgraded Titan Cameraman", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Upgraded Titan Cameraman2", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman"},
+    {name = "Upgraded Titan Cameraman3", gold = 3000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman2"},
+    {name = "Upgraded Titan Cameraman4", gold = 4000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman3"},
+    {name = "Upgraded Titan Cameraman5", gold = 8000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman4"},
+    {name = "Upgraded Titan Cameraman6", gold = 10000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman5"}
+}
+
+-- ทำงานตามขั้นตอน
+for _, upgrade in ipairs(upgrades) do
+        while not hasEnoughGold(upgrade.gold) do
+            task.wait(0.1)
+        end
+        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
+end
+
+local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
+
+-- ฟังก์ชันสำหรับตรวจสอบ Gold
+local function hasEnoughGold(amount)
+    if workspace.PlayerStats:FindFirstChild(player.Name) and 
+       workspace.PlayerStats[player.Name]:FindFirstChild("Gold") and 
+       workspace.PlayerStats[player.Name].Gold.Value >= amount then
+        return true
+    end
+    return false
+end
+
+-- ฟังก์ชันสำหรับส่งคำสั่ง ChangeMode
+local function changeMode(name, position, angles, towerName)
+    local args = {
+        [1] = name,
+        [2] = position * angles,
+        [3] = towerName and workspace.Towers:FindFirstChild(towerName) or nil
+    }
+    game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+end
+
+-- ขั้นตอนการอัปเกรด
+local upgrades = {
+    {name = "Upgraded Titan Cameraman", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Upgraded Titan Cameraman2", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman"},
+    {name = "Upgraded Titan Cameraman3", gold = 3000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman2"},
+    {name = "Upgraded Titan Cameraman4", gold = 4000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman3"},
+    {name = "Upgraded Titan Cameraman5", gold = 8000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman4"},
+    {name = "Upgraded Titan Cameraman6", gold = 10000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman5"}
+}
+
+-- ทำงานตามขั้นตอน
+for _, upgrade in ipairs(upgrades) do
+        while not hasEnoughGold(upgrade.gold) do
+            task.wait(0.1)
+        end
+        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
+end
+
+local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
+
+-- ฟังก์ชันสำหรับตรวจสอบ Gold
+local function hasEnoughGold(amount)
+    if workspace.PlayerStats:FindFirstChild(player.Name) and 
+       workspace.PlayerStats[player.Name]:FindFirstChild("Gold") and 
+       workspace.PlayerStats[player.Name].Gold.Value >= amount then
+        return true
+    end
+    return false
+end
+
+-- ฟังก์ชันสำหรับส่งคำสั่ง ChangeMode
+local function changeMode(name, position, angles, towerName)
+    local args = {
+        [1] = name,
+        [2] = position * angles,
+        [3] = towerName and workspace.Towers:FindFirstChild(towerName) or nil
+    }
+    game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+end
+
+-- ขั้นตอนการอัปเกรด
+local upgrades = {
+    {name = "Upgraded Titan Cameraman", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Upgraded Titan Cameraman2", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman"},
+    {name = "Upgraded Titan Cameraman3", gold = 3000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman2"},
+    {name = "Upgraded Titan Cameraman4", gold = 4000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman3"},
+    {name = "Upgraded Titan Cameraman5", gold = 8000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman4"},
+    {name = "Upgraded Titan Cameraman6", gold = 10000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman5"}
+}
+
+-- ทำงานตามขั้นตอน
+for _, upgrade in ipairs(upgrades) do
+        while not hasEnoughGold(upgrade.gold) do
+            task.wait(0.1)
+        end
+        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
+end
+
+local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
+
+-- ฟังก์ชันสำหรับตรวจสอบ Gold
+local function hasEnoughGold(amount)
+    if workspace.PlayerStats:FindFirstChild(player.Name) and 
+       workspace.PlayerStats[player.Name]:FindFirstChild("Gold") and 
+       workspace.PlayerStats[player.Name].Gold.Value >= amount then
+        return true
+    end
+    return false
+end
+
+-- ฟังก์ชันสำหรับส่งคำสั่ง ChangeMode
+local function changeMode(name, position, angles, towerName)
+    local args = {
+        [1] = name,
+        [2] = position * angles,
+        [3] = towerName and workspace.Towers:FindFirstChild(towerName) or nil
+    }
+    game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+end
+
+-- ขั้นตอนการอัปเกรด
+local upgrades = {
+    {name = "Upgraded Titan Cameraman", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Upgraded Titan Cameraman2", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman"},
+    {name = "Upgraded Titan Cameraman3", gold = 3000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman2"},
+    {name = "Upgraded Titan Cameraman4", gold = 4000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman3"},
+    {name = "Upgraded Titan Cameraman5", gold = 8000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman4"},
+    {name = "Upgraded Titan Cameraman6", gold = 10000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman5"}
+}
+
+-- ทำงานตามขั้นตอน
+for _, upgrade in ipairs(upgrades) do
+        while not hasEnoughGold(upgrade.gold) do
+            task.wait(0.1)
+        end
+        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
+end
+
+local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
+
+-- ฟังก์ชันสำหรับตรวจสอบ Gold
+local function hasEnoughGold(amount)
+    if workspace.PlayerStats:FindFirstChild(player.Name) and 
+       workspace.PlayerStats[player.Name]:FindFirstChild("Gold") and 
+       workspace.PlayerStats[player.Name].Gold.Value >= amount then
+        return true
+    end
+    return false
+end
+
+-- ฟังก์ชันสำหรับส่งคำสั่ง ChangeMode
+local function changeMode(name, position, angles, towerName)
+    local args = {
+        [1] = name,
+        [2] = position * angles,
+        [3] = towerName and workspace.Towers:FindFirstChild(towerName) or nil
+    }
+    game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+end
+
+-- ขั้นตอนการอัปเกรด
+local upgrades = {
+    {name = "Upgraded Titan Cameraman", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Upgraded Titan Cameraman2", gold = 1500, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman"},
+    {name = "Upgraded Titan Cameraman3", gold = 3000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman2"},
+    {name = "Upgraded Titan Cameraman4", gold = 4000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman3"},
+    {name = "Upgraded Titan Cameraman5", gold = 8000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman4"},
+    {name = "Upgraded Titan Cameraman6", gold = 10000, position = CFrame.new(-89.8586349, -34.0955658, -29.0876522), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Cameraman5"}
+}
+
+-- ทำงานตามขั้นตอน
+for _, upgrade in ipairs(upgrades) do
+        while not hasEnoughGold(upgrade.gold) do
+            task.wait(0.1)
+        end
+        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
+end
