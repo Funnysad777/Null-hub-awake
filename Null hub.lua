@@ -42,7 +42,7 @@ for i, upgrade in ipairs(upgrades) do
     end
 end
 
-wait(1)
+wait(3)
 local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
 
 -- ฟังก์ชันสำหรับตรวจสอบ Gold
@@ -67,7 +67,7 @@ end
 
 -- ขั้นตอนการอัปเกรด
 local upgrades = {
-    {name = "ScarySpeakerman", gold = 250, position = CFrame.new(-64.4728546, -34.0955658, -17.6681023, -0.999657393, -1.10892922e-08, 0.0261741541, -1.09862253e-08, 1, 4.08153733e-09, -0.0261741541, 3.79258358e-09, -0.999657393), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "ScarySpeakerman", gold = 200, position = CFrame.new(-64.4728546, -34.0955658, -17.6681023, -0.999657393, -1.10892922e-08, 0.0261741541, -1.09862253e-08, 1, 4.08153733e-09, -0.0261741541, 3.79258358e-09, -0.999657393), angles = CFrame.Angles(0, 0, 0), tower = nil},
     {name = "ScarySpeakerman2", gold = 350, position = CFrame.new(-64.4728546, -34.0955658, -17.6681023, -0.999657393, -1.10892922e-08, 0.0261741541, -1.09862253e-08, 1, 4.08153733e-09, -0.0261741541, 3.79258358e-09, -0.999657393), angles = CFrame.Angles(0, 0, 0), tower = "ScarySpeakerman"},
     {name = "ScarySpeakerman3", gold = 550, position = CFrame.new(-64.4728546, -34.0955658, -17.6681023, -0.999657393, -1.10892922e-08, 0.0261741541, -1.09862253e-08, 1, 4.08153733e-09, -0.0261741541, 3.79258358e-09, -0.999657393), angles = CFrame.Angles(0, 0, 0), tower = "ScarySpeakerman2"},
     {name = "ScarySpeakerman4", gold = 700, position = CFrame.new(-64.4728546, -34.0955658, -17.6681023, -0.999657393, -1.10892922e-08, 0.0261741541, -1.09862253e-08, 1, 4.08153733e-09, -0.0261741541, 3.79258358e-09, -0.999657393), angles = CFrame.Angles(0, 0, 0), tower = "ScarySpeakerman3"}
