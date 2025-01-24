@@ -42,6 +42,7 @@ for i, upgrade in ipairs(upgrades) do
     end
 end
 
+wait(1)
 local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
 
 -- ฟังก์ชันสำหรับตรวจสอบ Gold
