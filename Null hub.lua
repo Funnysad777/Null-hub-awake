@@ -87,6 +87,7 @@ for i, upgrade in ipairs(upgrades) do
     end
 end
 
+wait(3)
 local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
 
 -- ฟังก์ชันสำหรับตรวจสอบ Gold
@@ -131,6 +132,7 @@ for i, upgrade in ipairs(upgrades) do
     end
 end
 
+wait(3)
 local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
 
 -- ฟังก์ชันสำหรับตรวจสอบ Gold
@@ -175,6 +177,7 @@ for i, upgrade in ipairs(upgrades) do
     end
 end
 
+wait(3)
 local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
 
 -- ฟังก์ชันสำหรับตรวจสอบ Gold
@@ -219,6 +222,7 @@ for i, upgrade in ipairs(upgrades) do
     end
 end
 
+wait(3)
 local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
 
 -- ฟังก์ชันสำหรับตรวจสอบ Gold
@@ -263,6 +267,7 @@ for i, upgrade in ipairs(upgrades) do
     end
 end
 
+wait(3)
 local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
 
 -- ฟังก์ชันสำหรับตรวจสอบ Gold
@@ -307,6 +312,7 @@ for i, upgrade in ipairs(upgrades) do
     end
 end
 
+wait(3)
 local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
 
 -- ฟังก์ชันสำหรับตรวจสอบ Gold
