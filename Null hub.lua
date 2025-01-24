@@ -227,6 +227,147 @@ local function changeMode(name, position, angles, towerName)
     game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
 end
 
+-- ตารางการอัปเกรดและค่าทองที่กำหนดเอง
+local upgrades = { 
+    {name = "Scientist Cameraman", gold = 100, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Scientist Cameraman2", gold = 300, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman"},
+    {name = "Scientist Cameraman3", gold = 600, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman2"},
+    {name = "Scientist Cameraman4", gold = 1000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman3"},
+    {name = "Scientist Cameraman5", gold = 2000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman4"},
+    {name = "Scientist Cameraman6", gold = 5000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman5"},
+}
+
+-- ลูปทำงานตลอดจนกว่าจะไม่สามารถอัปเกรดได้
+local i = 1
+while i <= #upgrades do
+    local upgrade = upgrades[i]
+    if hasEnoughGold(upgrade.gold) then
+        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
+        print("ทำการอัปเกรด " .. upgrade.name)
+        i = i + 1 -- เพิ่มค่า i เพื่อไปที่การอัปเกรดถัดไป
+    else
+        print("ไม่พอ Gold สำหรับการอัปเกรด " .. upgrade.name)
+        wait(1) -- รอ 1 วินาทีแล้วลองใหม่
+    end
+end
+
+local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
+
+-- ฟังก์ชันสำหรับตรวจสอบ Gold
+local function hasEnoughGold(amount)
+    local playerStats = workspace.PlayerStats:FindFirstChild(player.Name)
+    if playerStats and playerStats:FindFirstChild("Gold") then
+        if playerStats.Gold.Value >= amount then
+            return true
+        end
+    end
+    return false
+end
+
+-- ฟังก์ชันสำหรับส่งคำสั่ง ChangeMode
+local function changeMode(name, position, angles, towerName)
+    local args = {
+        [1] = name,
+        [2] = position * angles,
+        [3] = towerName and workspace.Towers:FindFirstChild(towerName) or nil
+    }
+    game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+end
+
+-- ตารางการอัปเกรดและค่าทองที่กำหนดเอง
+local upgrades = { 
+    {name = "Scientist Cameraman", gold = 100, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Scientist Cameraman2", gold = 300, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman"},
+    {name = "Scientist Cameraman3", gold = 600, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman2"},
+    {name = "Scientist Cameraman4", gold = 1000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman3"},
+    {name = "Scientist Cameraman5", gold = 2000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman4"},
+    {name = "Scientist Cameraman6", gold = 5000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman5"},
+}
+
+-- ลูปทำงานตลอดจนกว่าจะไม่สามารถอัปเกรดได้
+local i = 1
+while i <= #upgrades do
+    local upgrade = upgrades[i]
+    if hasEnoughGold(upgrade.gold) then
+        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
+        print("ทำการอัปเกรด " .. upgrade.name)
+        i = i + 1 -- เพิ่มค่า i เพื่อไปที่การอัปเกรดถัดไป
+    else
+        print("ไม่พอ Gold สำหรับการอัปเกรด " .. upgrade.name)
+        wait(1) -- รอ 1 วินาทีแล้วลองใหม่
+    end
+end
+
+local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
+
+-- ฟังก์ชันสำหรับตรวจสอบ Gold
+local function hasEnoughGold(amount)
+    local playerStats = workspace.PlayerStats:FindFirstChild(player.Name)
+    if playerStats and playerStats:FindFirstChild("Gold") then
+        if playerStats.Gold.Value >= amount then
+            return true
+        end
+    end
+    return false
+end
+
+-- ฟังก์ชันสำหรับส่งคำสั่ง ChangeMode
+local function changeMode(name, position, angles, towerName)
+    local args = {
+        [1] = name,
+        [2] = position * angles,
+        [3] = towerName and workspace.Towers:FindFirstChild(towerName) or nil
+    }
+    game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+end
+
+-- ตารางการอัปเกรดและค่าทองที่กำหนดเอง
+local upgrades = { 
+    {name = "Scientist Cameraman", gold = 100, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = nil},
+    {name = "Scientist Cameraman2", gold = 300, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman"},
+    {name = "Scientist Cameraman3", gold = 600, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman2"},
+    {name = "Scientist Cameraman4", gold = 1000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman3"},
+    {name = "Scientist Cameraman5", gold = 2000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman4"},
+    {name = "Scientist Cameraman6", gold = 5000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Scientist Cameraman5"},
+}
+
+-- ลูปทำงานตลอดจนกว่าจะไม่สามารถอัปเกรดได้
+local i = 1
+while i <= #upgrades do
+    local upgrade = upgrades[i]
+    if hasEnoughGold(upgrade.gold) then
+        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
+        print("ทำการอัปเกรด " .. upgrade.name)
+        i = i + 1 -- เพิ่มค่า i เพื่อไปที่การอัปเกรดถัดไป
+    else
+        print("ไม่พอ Gold สำหรับการอัปเกรด " .. upgrade.name)
+        wait(1) -- รอ 1 วินาทีแล้วลองใหม่
+    end
+end
+
+local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
+
+-- ฟังก์ชันสำหรับตรวจสอบ Gold
+local function hasEnoughGold(amount)
+    local playerStats = workspace.PlayerStats:FindFirstChild(player.Name)
+    if playerStats and playerStats:FindFirstChild("Gold") then
+        if playerStats.Gold.Value >= amount then
+            return true
+        end
+    end
+    return false
+end
+
+-- ฟังก์ชันสำหรับส่งคำสั่ง ChangeMode
+local function changeMode(name, position, angles, towerName)
+    local args = {
+        [1] = name,
+        [2] = position * angles,
+        [3] = towerName and workspace.Towers:FindFirstChild(towerName) or nil
+    }
+    game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+end
+
 local upgrades = {
     {name = "Upgraded Titan Speakerman", gold = 1000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = nil},
     {name = "Upgraded Titan Speakerman2", gold = 1000, position = CFrame.new(3.23119831, -33.6337891, -18.9258442, 1, 0, 0, 0, 1, 0, 0, 0, 1), angles = CFrame.Angles(0, 0, 0), tower = "Upgraded Titan Speakerman"},
