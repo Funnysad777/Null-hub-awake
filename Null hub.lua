@@ -29,11 +29,7 @@ local upgrades = {
 }
 
 -- ทำงานตามขั้นตอน
-for i, upgrade in ipairs(upgrades) do
-    if i == 1 then
-        -- ทำงานส่วนแรกทันทีโดยไม่ตรวจสอบ Gold
-        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
-    else
+for _, upgrade in ipairs(upgrades) do
         -- รอจนกว่า Gold จะเพียงพอในส่วนที่เหลือ
         while not hasEnoughGold(upgrade.gold) do
             task.wait(0.1)
@@ -42,7 +38,6 @@ for i, upgrade in ipairs(upgrades) do
     end
 end
 
-wait(3)
 local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
 
 -- ฟังก์ชันสำหรับตรวจสอบ Gold
@@ -74,11 +69,7 @@ local upgrades = {
 }
 
 -- ทำงานตามขั้นตอน
-for i, upgrade in ipairs(upgrades) do
-    if i == 1 then
-        -- ทำงานส่วนแรกทันทีโดยไม่ตรวจสอบ Gold
-        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
-    else
+for _, upgrade in ipairs(upgrades) do
         -- รอจนกว่า Gold จะเพียงพอในส่วนที่เหลือ
         while not hasEnoughGold(upgrade.gold) do
             task.wait(0.1)
@@ -87,7 +78,6 @@ for i, upgrade in ipairs(upgrades) do
     end
 end
 
-wait(3)
 local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
 
 -- ฟังก์ชันสำหรับตรวจสอบ Gold
@@ -120,17 +110,26 @@ local upgrades = {
 }
 
 -- ทำงานตามขั้นตอน
-for i, upgrade in ipairs(upgrades) do
-    if i == 1 then
-        -- ทำงานส่วนแรกทันทีโดยไม่ตรวจสอบ Gold
-        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
-    else
-        -- รอจนกว่า Gold จะเพียงพอในส่วนที่เหลือ
-        while not hasEnoughGold(upgrade.gold) do
-            task.wait(0.1)
-        end
-        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
+for _, upgrade in ipairs(upgrades) do
+    -- รอจนกว่า Gold จะเพียงพอ
+    while not hasEnoughGold(upgrade.gold) do
+        task.wait(0.1)
     end
+    -- ดำเนินการอัปเกรด
+    changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
+end
+
+wait(3)
+local player = game.Players.LocalPlayer -- สมมติว่าคุณใช้ LocalPlayer
+
+-- ฟังก์ชันสำหรับตรวจสอบ Gold
+local function hasEnoughGold(amount)
+    if workspace.PlayerStats:FindFirstChild(player.Name) and 
+       workspace.PlayerStats[player.Name]:FindFirstChild("Gold") and 
+       workspace.PlayerStats[player.Name].Gold.Value >= amount then
+        return true
+    end
+    return false
 end
 
 -- ฟังก์ชันสำหรับส่งคำสั่ง ChangeMode
@@ -153,12 +152,7 @@ local upgrades = {
 }
 
 -- ทำงานตามขั้นตอน
-for i, upgrade in ipairs(upgrades) do
-    if i == 1 then
-        -- ทำงานส่วนแรกทันทีโดยไม่ตรวจสอบ Gold
-        changeMode(upgrade.name, upgrade.position, upgrade.angles, upgrade.tower)
-    else
-        -- รอจนกว่า Gold จะเพียงพอในส่วนที่เหลือ
+for _, upgrade in ipairs(upgrades) do
         while not hasEnoughGold(upgrade.gold) do
             task.wait(0.1)
         end
