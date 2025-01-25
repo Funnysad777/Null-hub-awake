@@ -1,5 +1,5 @@
 print("=====================================")
-print("      Thank you so much for use my script!   ")
+print("  Thank you so much for use my script!   ")
 print("=====================================")
 print("  Creator: FUNNYSAD")
 print("  Script: Null hub")
